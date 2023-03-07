@@ -1,24 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Composition from './components/2-4.Props/Composition';
+import Extraction from './components/2-4.Props/Extraction/Extraction';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React고고
-        </a>
-      </header>
-    </div>
+    <>
+    <Composition/>
+    <Extraction/>
+    </>
   );
 }
 
