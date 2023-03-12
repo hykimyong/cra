@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
-import List from './components/2-9.List/List';
+import ControlledComponent from './components/2-10.Form/ControlledComponent';
+import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent';
+// import List from './components/2-9.List/List';
 // import Event from './components/2-7.Event/Event';
 // import Condition from './components/2-8.ConditionalRendering/Condition';
 // import Composition from './components/2-4.Props/Composition';
@@ -12,8 +14,8 @@ import List from './components/2-9.List/List';
 function App() {
   return (
     <>
-    <List/>
-    
+    <UncontrolledComponent/>
+    <ControlledComponent/>
     </>
   );
 }
