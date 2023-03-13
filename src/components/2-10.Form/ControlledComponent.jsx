@@ -25,7 +25,7 @@ export default function ControlledComponent() {
     // }
     function handleSubmit(event){
         alert(`Name : ${name}, essay: ${essay}, flavor: ${flavor}`);
-        event.preventDefault();
+        event.preventDefault(); 
     }
   return (
     <form onSubmit={handleSubmit}>
