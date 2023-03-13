@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import ControlledComponent from './components/2-10.Form/ControlledComponent';
-import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent';
+// import ControlledComponent from './components/2-10.Form/ControlledComponent';
+// import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent';
+import State from './components/3-3.Hooks/State';
+import Reducer from './components/3-3.Hooks/Reducer';
 // import List from './components/2-9.List/List';
 // import Event from './components/2-7.Event/Event';
 // import Condition from './components/2-8.ConditionalRendering/Condition';
@@ -14,8 +16,8 @@ import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent'
 function App() {
   return (
     <>
-    <UncontrolledComponent/>
-    <ControlledComponent/>
+    <State/>
+    <Reducer/>
     </>
   );
 }
