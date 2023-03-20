@@ -6,7 +6,8 @@ import './App.css';
 // import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent';
 // import State from './components/3-3.Hooks/State';
 // import Reducer from './components/3-3.Hooks/Reducer';
-import Memo from './components/3-8.Memoization/Memo';
+// import Memo from './components/3-8.Memoization/Memo';
+import EmotionExample from './components/EmotionExample/EmotionExample';
 // import List from './components/2-9.List/List';
 // import Event from './components/2-7.Event/Event';
 // import Condition from './components/2-8.ConditionalRendering/Condition';
@@ -19,7 +20,7 @@ import Memo from './components/3-8.Memoization/Memo';
 function App() {
   return (
     <>
-    <Memo/>
+    <EmotionExample/>
     </>
   );
 }
