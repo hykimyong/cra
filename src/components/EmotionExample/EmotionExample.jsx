@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
+import { Global, css, keyframes, ClassNames } from '@emotion/react'
 
 import styled from '@emotion/styled'
 
@@ -22,12 +22,6 @@ const style = css`
   color: hotpink;
 `
 
-const SomeComponent = ({ children }) => (
-  <div css={style}>
-    Some hotpink text.
-    {children}
-  </div>
-)
 
 const anotherStyle = css({
   textDecoration: 'underline'
@@ -69,35 +63,70 @@ const base = css`
   color: turquoise;
 `
 
+const bounce = keyframes`
+  from, 20%, 53%, 80%, to {
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+`
+
+let SomeComponent = props => (
+  <div className={props.wrapperClassName}>
+    in the wrapper!
+    <div className={props.className}>{props.children}</div>
+  </div>
+)
+
 export default function EmotionExample() {
   return (
     <>
-    <div
+    <Global
+      styles={css`
+        p {
+          color: hotpink !important;
+        }
+      `}
+    />
+     <p
     css={css`
-      padding: 32px;
-      background-color: hotpink;
-      font-size: 24px;
-      border-radius: 4px;
-      &:hover {
-        color: ${color};
+      font-size: 30px;
+      @media (min-width: 420px) {
+        font-size: 50px;
       }
     `}
+  >Some Text~!
+  </p>
+    <p>Hello, world!</p>
+    <div
+    css={css`
+      animation: ${bounce} 1s ease infinite;
+    `}
   >
-    Hover to change color.
+    some bouncing text!
   </div>
-  <Button>Hello</Button>
-  <SomeComponent/>
-  <AnotherComponent/>
-  <P>PPPP</P>
-  <ArticleText>Article</ArticleText>
-  <div>
-    <div css={base}>This will be turquoise</div>
-    <div css={[danger, base]}>
-      This will be also be turquoise since the base styles overwrite the danger
-      styles.
-    </div>
-    <div css={[base, danger]}>This will be red</div>
-  </div>
+  <ClassNames>
+    {({ css, cx }) => (
+      <SomeComponent
+        wrapperClassName={css({ color: 'green' })}
+        className={css`
+          color: hotpink;
+        `}
+      >
+        from children!!
+      </SomeComponent>
+    )}
+  </ClassNames>
   </>
   )
 }

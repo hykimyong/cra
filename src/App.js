@@ -7,8 +7,8 @@ import './App.css';
 // import State from './components/3-3.Hooks/State';
 // import Reducer from './components/3-3.Hooks/Reducer';
 // import Memo from './components/3-8.Memoization/Memo';
-// import EmotionExample from './components/EmotionExample/EmotionExample';
-import StyledComponentExample from './components/StyledComponentsExample/StyledComponentExample';
+import EmotionExample from './components/EmotionExample/EmotionExample';
+// import StyledComponentExample from './components/StyledComponentsExample/StyledComponentExample';
 // import List from './components/2-9.List/List';
 // import Event from './components/2-7.Event/Event';
 // import Condition from './components/2-8.ConditionalRendering/Condition';
@@ -21,7 +21,7 @@ import StyledComponentExample from './components/StyledComponentsExample/StyledC
 function App() {
   return (
     <>
-    <StyledComponentExample/>
+    <EmotionExample/>
     </>
   );
 }
