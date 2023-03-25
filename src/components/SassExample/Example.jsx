@@ -31,6 +31,10 @@ export default function Example() {
         <p className='warning'>warning</p>
         <div className='square-av'></div>
         <div className='circle-av'></div>
+        <div className='sidebar'></div>
+        <div className='gray'>Gray</div>
+        <div className='button'>Button</div>
+        <div className='pulse'>pulse</div>
     </div>
   )
 }
