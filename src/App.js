@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import DateFnsExample from './components/DateFns/DateFnsExample';
 import DayjsExample from './components/Dayjs/DayjsExample';
 import MomentExample from './components/MomentExample/MomentExample';
 // import Example from './components/3-11.Portal/Example';
@@ -24,6 +25,7 @@ import MomentExample from './components/MomentExample/MomentExample';
 function App() {
   return (
     <>
+    <DateFnsExample/>
     <DayjsExample/>
     <MomentExample/>
     </>
