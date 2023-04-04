@@ -1,8 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import DateFnsExample from './components/DateFns/DateFnsExample';
-import DayjsExample from './components/Dayjs/DayjsExample';
-import MomentExample from './components/MomentExample/MomentExample';
+import Counter2 from './components/Counter2';
+// import DateFnsExample from './components/DateFns/DateFnsExample';
+// import DayjsExample from './components/Dayjs/DayjsExample';
+// import MomentExample from './components/MomentExample/MomentExample';
+import Counter from './features/counter/Counter';
 // import Example from './components/3-11.Portal/Example';
 // import Component from './components/3-14.PropTypes/Component';
 // import ControlledComponent from './components/2-10.Form/ControlledComponent';
@@ -25,9 +27,8 @@ import MomentExample from './components/MomentExample/MomentExample';
 function App() {
   return (
     <>
-    <DateFnsExample/>
-    <DayjsExample/>
-    <MomentExample/>
+    <Counter2/>
+    <Counter/>
     </>
   );
 }
