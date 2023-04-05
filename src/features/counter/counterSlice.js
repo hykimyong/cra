@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//redux스토어 생성, redux devtool사용가능
 export const counterSlice = createSlice({
     name: 'counter',
     initialState: {
