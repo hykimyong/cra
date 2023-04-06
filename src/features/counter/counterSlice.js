@@ -1,4 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const fetchIncrement = createAsyncThunk(
+    'users/fetchByIdStatus',
+  async (value) => {
+    const response = await axios.put("/counter/increment",{value : value})
+    return response.data
+  }
+)
 
 export const counterSlice = createSlice({
     name: 'counter',
@@ -15,6 +24,11 @@ export const counterSlice = createSlice({
         incrementByAmount:(state,action)=>{
             state.value += action.payload;
         }
+    },
+    extraReducers: {
+        [fetchIncrement.fulfilled] : (state,action)=>{
+            state.value = action.payload.value;
+        },
     }
 });
 
