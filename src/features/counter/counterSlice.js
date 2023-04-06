@@ -9,6 +9,7 @@ export const fetchIncrement = createAsyncThunk(
   }
 )
 
+//redux스토어 생성, redux devtool사용가능
 export const counterSlice = createSlice({
     name: 'counter',
     initialState: {
