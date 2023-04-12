@@ -1,6 +1,31 @@
 import { observer } from "mobx-react";
 import {action} from "mobx";
 
+const TodoView = observer(({todo}) => {
+  const onToggleCompleted = () => {
+    todo.completed = !todo.completed;
+  }
+
+  const onRename = () => {
+    todo.task = prompt('Task name', todo.task) || todo.task;
+  }
+
+  return (
+    <li onDoubleClick={ onRename }>
+      <input
+        type='checkbox'
+        checked={ todo.completed }
+        onChange={ onToggleCompleted }
+      />
+      { todo.task }
+      { todo.assignee
+        ? <small>{ todo.assignee.name }</small>
+        : null
+      }
+    </li>
+  );
+})
+
 const TodoList = observer(({store}) => {
     const onNewTodo = () => {
       store.addTodo(prompt('Enter a new todo:','coffee plz'));
@@ -25,6 +50,10 @@ const TodoList = observer(({store}) => {
             store.pendingRequests--;
         }), 2000);
     }
+
+    const fetchData = () => {
+      store.fetchData();
+    }
   
     return (
       <div>
@@ -39,32 +68,9 @@ const TodoList = observer(({store}) => {
         <small> (double-click a todo to edit)</small>
         <button onClick={run}>run code</button>
         <button onClick={load}>load data</button>
+        <button onClick={fetchData}>fetch data</button>
+        
       </div>
-    );
-  })
-  
-  const TodoView = observer(({todo}) => {
-    const onToggleCompleted = () => {
-      todo.completed = !todo.completed;
-    }
-  
-    const onRename = () => {
-      todo.task = prompt('Task name', todo.task) || todo.task;
-    }
-  
-    return (
-      <li onDoubleClick={ onRename }>
-        <input
-          type='checkbox'
-          checked={ todo.completed }
-          onChange={ onToggleCompleted }
-        />
-        { todo.task }
-        { todo.assignee
-          ? <small>{ todo.assignee.name }</small>
-          : null
-        }
-      </li>
     );
   })
   
