@@ -14,7 +14,7 @@ class ObservableTodoStore {
         fetchData: flow,
       });
       // makeAutoObservable(this);
-      autorun(() => console.log(this.report));
+      autorun(() => console.log(this.report)); 
     }
   
     get completedTodosCount() {
@@ -49,7 +49,7 @@ class ObservableTodoStore {
         const todo = yield fetchTodo();
         this.addTodo(todo);
       }catch(error){
-        console.log(`error : ${error}`);
+        console.log(`errors : ${error}`);
       }
     }
   }
