@@ -27,7 +27,6 @@ export const filteredTodoListState = selector({
   },
 });
 
-
 export const todoListStatsState = selector({
   key: 'todoListStatsState',
   get: ({get}) => {
