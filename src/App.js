@@ -7,6 +7,8 @@ import './App.css';
 import TodoList from './components/RecoilExample/Todo/TodoList';
 import CurrentUserInfo from './components/RecoilExample/CurrentUserInfo';
 import React from 'react';
+import Text from './components/ZustandExample/Text';
+import CharacterCounter from './components/ZustandExample/CharacterCounter';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -16,15 +18,17 @@ function App() {
   return (
     <>
     {/* <TodoList store={observableTodoStore}/> */}
-    <RecoilRoot>
-      {/* <FontButton/>
+    {/* <RecoilRoot>
+       <FontButton/>
       <Text/>
-      <CharacterCounter/> */}
+      <CharacterCounter/> 
       <TodoList/>
       <React.Suspense fallback={<div>Loading...</div>}>
         <CurrentUserInfo />
       </React.Suspense>
-    </RecoilRoot>
+    </RecoilRoot> */}
+    <Text/>
+    <CharacterCounter/>
     </>
   );
 }
