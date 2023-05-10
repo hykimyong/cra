@@ -5,7 +5,7 @@ const useStore = create((set)=>({
   fontSize: 14,
   increaseFontSize: ()=> set((state)=>({fontSize:state.fontSize+1})),
   trigger: false,
-  toggleTrigger:()=> set((state)=>({trigger: !state.trigger})),
+  toggleTrigger:()=> set((state)=>({trigger: !state.trigger}), true),
 }));
 
 function FontLabel(){
@@ -15,7 +15,7 @@ function FontLabel(){
     fontSizeLabel: state.fontSize + "px",
     trigger: state.trigger,
     toggleTrigger: state.toggleTrigger,
-  }),(oldState,newState)=>oldState.trigger === newState.trigger
+  })
   );
   return(
     <>
