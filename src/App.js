@@ -5,11 +5,12 @@ import './App.css';
 // import Text from './components/RecoilExample/Text';
 // import CharacterCounter from './components/RecoilExample/CharacterCounter';
 // import TodoList from './components/RecoilExample/Todo/TodoList';
-import CurrentUserInfo from './components/RecoilExample/CurrentUserInfo';
 import React from 'react';
 import Text from './components/ZustandExample/Text';
 import CharacterCounter from './components/ZustandExample/CharacterCounter';
 import TodoList from './components/ZustandExample/Todo/TodoList';
+import CurrentUserInfo from './components/ZustandExample/CurrentUserInfo';
+import Scratches from './components/ZustandExample/Scratches';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -31,6 +32,8 @@ function App() {
     <Text/>
     <CharacterCounter/>
     <TodoList/>
+    <CurrentUserInfo/>
+    <Scratches/>
     </>
   );
 }
