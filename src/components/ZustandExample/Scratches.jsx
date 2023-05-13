@@ -4,7 +4,7 @@ import create from 'zustand';
 const useStore = create((set)=>({
     scratches:0,
     addScratches : ()=>set((state)=>({scratches:state.scratches+1}))
-}))
+}));
 
 export default function Scratches() {
     // const scratches = useStore((state)=>state.scratches);
