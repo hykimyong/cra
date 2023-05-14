@@ -11,6 +11,7 @@ import CharacterCounter from './components/ZustandExample/CharacterCounter';
 import TodoList from './components/ZustandExample/Todo/TodoList';
 import CurrentUserInfo from './components/ZustandExample/CurrentUserInfo';
 import Scratches from './components/ZustandExample/Scratches';
+import Profile from './components/SWRExample/Profile';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -29,11 +30,12 @@ function App() {
         <CurrentUserInfo />
       </React.Suspense>
     </RecoilRoot> */}
-    <Text/>
+    {/* <Text/>
     <CharacterCounter/>
     <TodoList/>
     <CurrentUserInfo/>
-    <Scratches/>
+    <Scratches/> */}
+    <Profile/>
     </>
   );
 }
