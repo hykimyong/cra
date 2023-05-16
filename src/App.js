@@ -12,6 +12,7 @@ import TodoList from './components/ZustandExample/Todo/TodoList';
 import CurrentUserInfo from './components/ZustandExample/CurrentUserInfo';
 import Scratches from './components/ZustandExample/Scratches';
 import Profile from './components/SWRExample/Profile';
+import Cache from './components/SWRExample/Cache';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -36,6 +37,7 @@ function App() {
     <CurrentUserInfo/>
     <Scratches/> */}
     <Profile/>
+    <Cache/>
     </>
   );
 }
