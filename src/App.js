@@ -13,10 +13,13 @@ import CurrentUserInfo from './components/ZustandExample/CurrentUserInfo';
 import Scratches from './components/ZustandExample/Scratches';
 import Profile from './components/SWRExample/Profile';
 import Cache from './components/SWRExample/Cache';
+import Example from './components/ReactQueryExample/Example';
+import { QueryClient, QueryClientProvider } from 'react-query';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
 // import Counter from './features/counter/Counter';
+const queryClient = new QueryClient();
 
 function App() {
   return (
@@ -36,8 +39,11 @@ function App() {
     <TodoList/>
     <CurrentUserInfo/>
     <Scratches/> */}
-    <Profile/>
-    <Cache/>
+    {/* <Profile/>
+    <Cache/> */}
+    <QueryClientProvider client={queryClient}>
+      <Example/>
+    </QueryClientProvider>
     </>
   );
 }
