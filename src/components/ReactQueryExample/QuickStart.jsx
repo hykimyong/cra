@@ -27,6 +27,12 @@ export default function QuickStart() {
                 <li key={todo.id}>{todo.title}</li>
             ))}
         </ul>
+        <button onClick={()=>{
+            mutation.mutate({
+                id: Date.now(),
+                title:"Learn React-Query",
+            })
+        }}>Add Todo</button>
     </div>
   )
 }
