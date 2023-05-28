@@ -15,7 +15,7 @@ export default function QuickStart() {
     });
 
     if(query.isLoading){
-        return "Loading...";
+        return "Loading";
     }
 
     if(query.error){
