@@ -16,6 +16,7 @@ import Cache from './components/SWRExample/Cache';
 import Example from './components/ReactQueryExample/Example';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import Pagination from './components/ReactQueryExample/Pagination';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -44,6 +45,7 @@ function App() {
     <Cache/> */}
     <QueryClientProvider client={queryClient}>
       <Example/>
+      <Pagination/>
       <ReactQueryDevtools/>
     </QueryClientProvider>
     </>
