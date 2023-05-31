@@ -17,6 +17,7 @@ import Example from './components/ReactQueryExample/Example';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import Pagination from './components/ReactQueryExample/Pagination';
+import InfiniteScroll from './components/ReactQueryExample/InfiniteScroll';
 // import { observableTodoStore } from './app/ObservableTodoStore';
 // import MobxExample from './components/MobxExample';
 // import TodoList from './components/TodoList';
@@ -44,8 +45,9 @@ function App() {
     {/* <Profile/>
     <Cache/> */}
     <QueryClientProvider client={queryClient}>
-      <Example/>
-      <Pagination/>
+      {/* <Example/>
+      <Pagination/> */}
+      <InfiniteScroll/>
       <ReactQueryDevtools/>
     </QueryClientProvider>
     </>
