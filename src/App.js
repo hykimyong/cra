@@ -45,9 +45,8 @@ function App() {
     {/* <Profile/>
     <Cache/> */}
     <QueryClientProvider client={queryClient}>
-      {/* <Example/>
-      <Pagination/> */}
-      <InfiniteScroll/>
+      <Example/>
+      <Pagination/>
       <ReactQueryDevtools/>
     </QueryClientProvider>
     </>
