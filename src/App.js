@@ -46,8 +46,8 @@ function App() {
     <Cache/> */}
     <QueryClientProvider client={queryClient}>
       <Example/>
-      <Pagination/>
-      <ReactQueryDevtools/>
+      {/* <Pagination/>
+      <ReactQueryDevtools/> */}
     </QueryClientProvider>
     </>
   );
